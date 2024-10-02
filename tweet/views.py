@@ -22,7 +22,7 @@ def CreateTweet(request):
             return redirect('tweet_list')
     else :
         form = TweetForm()
-    return render(request,'tweet_create.html', {'form':form})
+    return render(request,'tweet_form.html', {'form':form})
 
 @login_required
 def EditTweet(request,tweet_id):
