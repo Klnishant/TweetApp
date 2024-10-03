@@ -46,7 +46,7 @@ def DeleteTweet(request,tweet_id):
     tweet = get_object_or_404(Tweet,pk=tweet_id,user=request.user)
     if request.method == 'POST':
         tweet.delete()
-        return redirect('tweet_list.html')
+        return redirect('tweet_list')
     return render(request,'tweet_confirm_delete.html',{'tweet':tweet})
 
 def register(request):
